@@ -47,9 +47,7 @@ function App() {
         <Route exact path = '/kids' element ={<Kids/>} />
         <Route exact path = '/shopcares' element ={<Shopcares/>} />
         <Route exact path = '/cart' element ={<Cart/>} />
-        <Route path='/profile' element={<PrivateRoute />}>
-            <Route path='/profile' element={<Profile />} />
-          </Route>
+        <Route path='/profile' element={<Profile />} />
         <Route exact path = '/signin' element ={<Signin/>} />
         <Route exact path = '/signup' element ={<Signup/>} />
         <Route exact path = '/forgotpassword' element ={<Forgotpassword/>} />
