@@ -1960,9 +1960,6 @@ CATEGORY CSS
    width: 100%;
  }
 
- .shop-banner-men, .shop-banner-women, .shop-banner-kids {
-   height: fit-content;
- }
 
  .product-image {
   background-color: rgb(191, 215, 235);
@@ -2059,9 +2056,6 @@ CATEGORY CSS
    width: 100%;
  }
 
- .shop-banner-men, .shop-banner-women, .shop-banner-kids {
-   height: fit-content;
- }
 
  .product-image {
   background-color: rgb(191, 215, 235);
@@ -3317,10 +3311,12 @@ FOOTER CSS
 
   .banner-img, .banner-img2, .banner-img3{
    width: 100%;
+   margin-top: 85px;
   }
 
   .shopnow-btn {
     visibility: hidden;
+    margin-bottom: 70px;
   }
 
 
