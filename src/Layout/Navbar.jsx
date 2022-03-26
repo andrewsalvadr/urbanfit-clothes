@@ -41,18 +41,18 @@ function NavbarShop () {
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
       <NavLink className="nav-link active" to="/">HOME</NavLink>
-         <NavLink className="nav-link active mx-1" to="/men">SHOPMEN </NavLink>
-         <NavLink className="nav-link active mx-1" to="/women"> SHOPWOMEN</NavLink>
-         <NavLink className="nav-link active mx-1" to="/kids"> SHOPKIDS</NavLink>
-         <NavLink className="nav-link active mx-1" to="/shopcares">SHOPCARES</NavLink>
+         <NavLink className="nav-link active" to="/men">SHOPMEN </NavLink>
+         <NavLink className="nav-link active" to="/women"> SHOPWOMEN</NavLink>
+         <NavLink className="nav-link active" to="/kids"> SHOPKIDS</NavLink>
+         <NavLink className="nav-link active" to="/shopcares">SHOPCARES</NavLink>
     </Nav>
     <Nav>
-    <NavLink className="nav-icons nav-link active mx-1" to="/cart"><FaShoppingBag className='fs-4'/>{' '} 
+    <NavLink className="nav-icons nav-link active mx-1 d-flex" to="/cart"><FaShoppingBag className='fs-4'/>{' '} 
     {countCartItems ? ( <p className="badge mx-1">{countCartItems}</p>) : ('' )
     }  
          </NavLink>
       
-          <NavLink className="nav-link active mx-1" to="/signin">
+          <NavLink className="nav-link active" to="/signin">
           {user ? <Link to='/profile'  style={{ textDecoration: 'none' }}><p className='userBadge'>Hi, {user.displayName} </p></Link> : <MdAccountCircle className='fs-3'  style={ user ? { display:'none'} : {display : 'block'} }  />}
           </NavLink>
           <NavLink className="logoutNav nav-link active mx-1" to="/logout" onClick={onLogout}>{user ? <MdLogout className='fs-3'/>  : (' ') }</NavLink>
