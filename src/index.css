@@ -1,13 +1,3468 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* 
+ * {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.men-shop {
+  font-size: 20px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;600&family=Roboto:wght@100&display=swap');
+
+/* ************************************************************************************************************************************************************************************
+NAVBAR CSS
+************************************************************************************************************************************************************************************ */
+
+* {
+  background-color: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  box-shadow: inset 0 0 5px rgb(43, 39, 39); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(43, 39, 39); 
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.container-pages {
+  margin-top: 150px;
+}
+
+.product-details {
+  display: flex;
+}
+
+.navbar-container {
+  /* border: solid black; */
+  /* margin-bottom: 5px; */
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* padding: 0.7rem 2rem; */
+      overflow: hidden;
+      z-index: 2;
+      width: 100%;
+      margin: auto;
+      top: 0;
+      border-bottom: solid 1px var(--primary-color);
+      opacity: 0.9;
+
+
+      /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25); */
+      box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
+        -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+      box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white,
+        12px 0 15px -4px rgba(31, 73, 125, 0.8),
+        -12px 0 15px -4px rgba(31, 73, 125, 0.8);
+}
+
+
+.badge {
+  background-color: rgb(243, 52, 52);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+ }
+
+ .userBadge {
+   text-decoration: none;
+   color: black;
+   font-family: 'Poppins', sans-serif;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+.main-logo {
+  height: 50px;
+  width: 150px;
+  margin-top: 10px;
+  margin-right: 80px;
+}
+
+.main-logo:hover {
+  height: 55px;
+  width: 155px;
+}
+
+
+
+/* ************************************************************************************************************************************************************************************
+Sign in/up & Profile
+************************************************************************************************************************************************************************************ */
+
+.container-container {
+  display: flex;
+  justify-content: start;
+  background-image: url('./Asset/bgsignin.jpg'); 
+  background-size:cover;
+  background-repeat: no-repeat;
+ background-position: center;
+}
+
+.container-signpage{
+  margin-left: 150px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 150px;
+  border: solid black;
+  border-width: 0.5px;
+  margin-bottom: 150px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.container-logout {
+  display: flex;
+  justify-content: start;
+  background-image: url('./Asset/logout.jpg'); 
+  background-size:cover;
+  background-repeat: no-repeat;
+ background-position: center;
+ margin-top: 100px;
+ height: 900px;
+}
+
+.container-thankyou {
+  background: none;
+  margin-top:  250px;
+}
+
+.ty-text {
+  background-color: rgb(236, 240, 24);
+  font-family: 'Roboto', sans-serif;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.container-error {
+  display: flex;
+  justify-content: start;
+  background-image: url('./Asset/error.jpg'); 
+  background-size:cover;
+  background-repeat: no-repeat;
+ background-position: center;
+ height: 900px;
+ margin-top: 100px;
+}
+
+.container-error-text {
+  background: none;
+  margin-top: 250px;
+}
+
+.error-text {
+  margin: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+
+.nameInput {
+  margin-bottom: 2rem;
+  background: url('./Asset/badgeIcon.svg') #ffffff 2.5% center no-repeat;
+}
+
+.emailInput {
+  margin-bottom: 2rem;
+  background: url('./Asset/personIcon.svg') #ffffff 2.5% center no-repeat;
+}
+
+.passwordInputDiv {
+  position: relative;
+}
+
+.passwordInput {
+  margin-bottom: 2rem;
+  background: url('./Asset/lockIcon.svg') #ffffff 2.5% center no-repeat;
+}
+
+.textarea {
+  padding: 1rem 1.5rem;
+  height: 300px;
+  border-radius: 1rem;
+}
+
+.input,
+.passwordInput,
+.emailInput,
+.nameInput,
+.textarea {
+  box-shadow: rgba(0, 0, 0, 0.11);
+  border: none;
+  background: #ffffff;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 100%;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 3rem;
+  font-size: 1rem;
+}
+
+.showPassword {
+  cursor: pointer;
+  position: absolute;
+  top: -4%;
+  right: 1%;
+  padding: 1rem;
+  background-color: rgb(235, 236, 241);
+  border-radius: 50px;
+}
+
+.forgotPasswordLink {
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;  
+}
+
+.forgot-password-section {
+padding-bottom: 128px;
+}
+
+
+.signInBar,
+.signUpBar {
+ margin-top: 0.2rem;
+display: flex;
+justify-content: space-around;
+}
+
+.signInButton {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rgb(209, 28, 37);
+  color: white;
+  border-radius: 20px;
+  border: solid;
+  border-color: rgb(248, 244, 244);
+  border-width: 5px;
+}
+
+.signInButton:hover {
+  background-color: white;
+  color: rgb(0, 4, 49);
+}
+
+.signInText {
+  margin: 10px;
+}
+
+.signInButton,
+.signUpButton,
+.signInText,
+.signUpText {
+  cursor: pointer;
+}
+
+.socialLogin {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socialIconDiv {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.socialIconImg {
+  width: 100%;
+}
+
+.registerLink {
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+/* Profile */
+
+.messageForm {
+  margin-top: 0.5rem;
+}
+
+.messageDiv {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.messageLabel {
+  margin-bottom: 0.5rem;
+}
+
+.profile {
+  margin-bottom: 10rem;
+}
+
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logOut {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: rgb(209, 28, 37);
+  color: white;
+  border-radius: 20px;
+  border: solid;
+  border-color: rgb(248, 244, 244);
+  border-width: 5px;
+}
+
+.logOut:hover {
+  background-color: white;
+  color: rgb(0, 4, 49);
+}
+
+.profileDetailsHeader {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+}
+
+.personalDetailsText {
+  font-weight: 600;
+}
+
+.changePersonalDetails {
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(209, 28, 37);
+}
+
+.changePersonalDetails:hover {
+  color: black;
+}
+
+.profileCard {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin-bottom: 345px;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileName,
+.profileEmail,
+.profileAddress,
+.profileAddressActive,
+.profileEmailActive,
+.profileNameActive {
+  all: unset;
+  margin: 0.3rem 0;
+  font-weight: 600;
+  width: 100%;
+}
+.profileNameActive {
+  background-color: rgba(44, 44, 44, 0.1);
+}
+
+.profileEmail,
+.profileAddress,
+.profileAddressActive,
+.profileEmailActive {
+  font-weight: 500;
+}
+.profileEmailActive {
+  background-color: rgba(44, 44, 44, 0.1);
+}
+
+.profileAddressActive {
+  background-color: rgba(44, 44, 44, 0.1);
+}
+
+
+
+/* ************************************************************************************************************************************************************************************
+HOME CSS
+************************************************************************************************************************************************************************************ */
+.home-container {
+  display: inline;
+  max-width: auto;
+}
+
+/* ************************************************************************************************************************************************************************************
+BANNER CSS
+************************************************************************************************************************************************************************************ */
+
+.banner-img, 
+.banner-img2, 
+.banner-img3, 
+.shopnow-btn2, 
+.shopnow-btn3, 
+.banner-quote, 
+.banner-quote1, 
+.banner-quote2, 
+.banner-quote3, 
+.banner-quote4, 
+.banner-quote5, 
+.banner-quote6, 
+.banner-quote7{
+  position: absolute;
+  animation: transitionIn 0.75s;
+  background-color: rgb(247, 242, 242);
+
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+
+main, #clothmen {
+animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+from {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+to {
+  opacity: 1;
+  transform: translateY(0)
+}
+}
+
+
+.banner-img {
+  height: max-content;
+  width: max-content;
+  margin: auto;
+  z-index: 1;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 0px;
+}
+
+
+.shopnow-btn {
+  margin-top: 450px;
+  margin-left: 815px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(43, 39, 39);
+  color: #FDFDFF;
+  border: solid white;
+  border-width: 2px;
+  cursor: pointer;
+  z-index: 9999;
+  margin-bottom: 450px;
+}
+
+.shopnow-btn:hover {
+  background-color: #FDFDFF;
+  color: rgb(27, 26, 26);
+  border: solid black;
+  border-width: 2px;
+}
+
+.banner-quote {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 500px;
+  border: none;
+
+}
+
+.banner-quote1 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 10px;
+  border: none;
+}
+
+.banner-quote2 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 500px;
+  border: none;
+
+}
+
+.banner-quote:hover, .banner-quote1:hover, .banner-quote2:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  width: 135px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* ************************************************************************************************************************************************************************************
+BANNER 2 CSS
+************************************************************************************************************************************************************************************ */
+
+.banner-img2 {
+  height: max-content; 
+  width: max-content;
+  z-index: -9999;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 0px;
+}
+
+.shopnow-btn2 {
+  margin-top: 450px;
+  margin-left: 815px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(43, 39, 39);
+  color: #FDFDFF;
+  border: solid white;
+  border-width: 2px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.shopnow-btn:hover {
+  background-color: #FDFDFF;
+  color: rgb(27, 26, 26);
+  border: solid black;
+  border-width: 2px;
+}
+
+
+.banner-quote3 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 500px;
+  border: none;
+
+}
+
+.banner-quote4 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 1300px;
+  border: none;
+}
+
+.banner-quote5 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 1500px;
+  border: none;
+}
+
+.shopnow-btn2:hover {
+  background-color: #FDFDFF;
+  color: rgb(27, 26, 26);
+  border: solid rgb(0, 0, 0);
+  border-width: 2px;
+}
+
+.banner-quote3:hover, .banner-quote4:hover, .banner-quote5:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  width: 140px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+/* ************************************************************************************************************************************************************************************
+BANNER 3 CSS
+************************************************************************************************************************************************************************************ */
+
+
+.banner-img3 {
+  height: max-content; 
+  width: max-content;
+  margin: auto;
+  z-index: 1;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 1px;
+}
+
+.shopnow-btn3 {
+  margin-top: 450px;
+  margin-left: 815px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(43, 39, 39);
+  color: #FDFDFF;
+  border: solid white;
+  border-width: 2px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.shopnow-btn3:hover {
+  background-color: #FDFDFF;
+  color: rgb(27, 26, 26);
+  border: solid black;
+  border-width: 2px;
+}
+
+
+.banner-quote6 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 450px;
+  border: none;
+
+}
+
+.banner-quote7 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 1180px;
+  border: none;
+}
+
+
+.shopnow-btn3:hover {
+  background-color: #FDFDFF;
+  color: rgb(27, 26, 26);
+  border: solid black;
+  border-width: 2px;
+}
+
+.banner-quote6:hover, .banner-quote7:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  width: 155px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+/* ************************************************************************************************************************************************************************************
+CART CSS
+************************************************************************************************************************************************************************************ */
+/* .home a, .cart a{
+  text-decoration: none;
+  color: #212529;
+} */
+
+.faq-container {
+  margin: 50px;
+}
+
+#foo {
+  pointer-events: none;
+}
+
+.bag-title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  margin-top: 50px;
+}
+
+.two-btn-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-continue-shopping, .btn-checkoutnow {
+  background-color: black;
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  border: solid white;
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.btn-continue-shopping:hover, .btn-checkoutnow:hover {
+  background-color: white;
+  color:black;
+  border: solid black;
+  border-width: 1px;
+}
+
+
+.btn-remove-cart {
+  height: 150px;
+  cursor: pointer;
+}
+
+.qty-cart {
+  position: relative;
+  margin: 2px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-image-cart {
+  height: 150px;
+}
+
+
+.btn-increase-cart, .btn-decrease-cart{
+  border: none;
+  position: relative;
+  font-size: 18px;
+}
+
+.cart-empty-text {
+  margin: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+
+}
+
+
+/* ************************************************************************************************************************************************************************************
+CATEGORY CSS
+************************************************************************************************************************************************************************************ */
+
+.category-section{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.category-img {
+  height: 700px;
+  transition: transform 0.3s ease;
+  animation: transitionIn 0.75s;
+  cursor: pointer;
+  padding: 10px;
+
+}
+
+.category-img:hover {
+  transform: scale(1.01)
+}
+
+.category-section2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.category-img2 {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+}
+
+
+/*************************************************************************************************************************************************************************************
+BG COLORS:
+************************************************************************************************************************************************************************************ */
+
+/* .shop-banner, 
+.title-category, 
+.title-category2, 
+.men-featured-products,
+.men-featured-img,
+.shop-container,
+.btn-tags,
+.filter-products,
+.filter-text2,
+.scroll-top,
+.scroller,
+.product-image,
+.product-container {
+ background-color:   	#ded0b7;
+} */
+
+
+
+/* ************************************************************************************************************************************************************************************
+FEATURED CSS
+************************************************************************************************************************************************************************************ */
+
+
+
+.title-featured {
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.men-featured-products, .women-featured-products, .kids-featured-products {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.men-featured-img, .women-featured-img, .kids-featured-img {
+  height: 200px;
+  border-width: 1px;
+  margin: 5px;
+  transition: transform 0.5s ease;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  animation: transitionIn 0.75s;
+
+}
+.men-featured-img:hover, .women-featured-img:hover, .kids-featured-img:hover {
+  cursor: pointer;
+  transform: scale( 1.1);
+}
+
+
+/* ************************************************************************************************************************************************************************************
+FOOTER CSS
+************************************************************************************************************************************************************************************ */
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #2f2f2f;
+  background-color: rgb(43, 39, 39);
+  border-top: 1px solid #e5e5e5;
+  /* margin-top: 100px; */
+  animation: transitionIn 0.75s;
+
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+  background-color: rgb(43, 39, 39);
+
+}
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+.contact-footer {
+  background-color: rgb(43, 39, 39);
+  color:white;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav-title {
+  font-weight: 400;
+  font-size: 21px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+  background-color: rgb(43, 39, 39);
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  border-radius: 100px;
+  border: solid white;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+.footer li {
+  line-height: 2em;
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+.footer a {
+  text-decoration: none;
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+
+.footer__nav {
+  display: flex;
+	flex-flow: row wrap;
+
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+
+}
+
+.nav-title {
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: rgb(43, 39, 39);
+}
+
+.legal-text {
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+
+/* ************************************************************************************************************************************************************************************
+PRODUCTS CSS
+************************************************************************************************************************************************************************************ */
+
+/* ************************************************************************************************************************************************************************************
+MEN CSS
+************************************************************************************************************************************************************************************ */
+
+
+.product-container {
+  width: 60%;
+
+}
+
+.shop-container{
+  display: flex;
+  justify-content: center;
+}
+
+.title-category {
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  margin-top: 20px;
+}
+
+.title-category2 {
+  margin-top: 50px;
+}
+
+.container-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-auto-rows: minmax(100px, auto); */
+}
+
+.filter-products {
+  display: flex;
+}
+
+.filter-text {
+  font-size: 16px;
+  margin-right: 15px;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.product-image {
+  /* background-color: #ec9c46; */
+  border: solid black;
+  border-width: 1px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 20px;
+  height: 220px;
+  width: 350;
+  transition: transform 1s ease;
+}
+
+.product-name-text {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+}
+
+.product-image:hover {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+.product-image-women {
+  /* background-color: rgb(235, 192, 206); */
+  border: solid black;
+  border-width: 1px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 20px;
+  height: 220px;
+  width: 350;
+  transition: transform 1s ease;
+}
+
+.product-image-women:hover {
+  background-color: white;
+  transform: scale(1.2)
+}
+
+.product-image-kids {
+  /* background-color: rgb(241, 241, 184); */
+  border: solid black;
+  border-width: 1px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 20px;
+  height: 220px;
+  width: 350;
+  transition: transform 1s ease;
+}
+
+.product-image-kids:hover {
+  background-color: white;
+  transform: scale(1.2)
+}
+
+
+.shop-banner {
+  height: fit-content;
+  width: 100%;
+}
+
+.shop-banner-kids {
+  margin-top: 100px;
+  height: 1050px;
+  width: 100%;
+}
+
+.shop-banner-women {
+  margin-top: 100px;
+  height: 1050px;
+   width: 100%;
+}
+
+
+.shop-banner-men {
+  margin-top: 100px;
+  height: 1050px;
+  width: 100%;
+}
+
+.shop-banner-cart {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.shopmen-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-top a{
+ display: flex;
+ justify-content: center;
+ margin-top: 100px;
+ padding-bottom: 20px;
+ font-family: 'Poppins', sans-serif;
+ font-size: 16px;
+ text-decoration: none;
+ color: rgb(0, 4, 49);
+
+}
+
+
+.scroller {
+  position: relative;
+  margin-top: 20px;
+  height: 50px;
+  width: 30px;
+  position: absolute;
+  left: 94%;  
+  cursor: pointer;
+  animation: animation 0.8s alternate infinite;
+}
+
+.scroller:hover {
+  border: 2px solid black;
+  border-radius: 50px;
+  border-width: 1px;
+}
+
+@keyframes animation  {
+  from {
+   margin-top: 5px;
+  }
+  to{
+    margin-bottom: 5px;
+  }
+}
+
+.scroller::before,
+.scroller::after{
+  content: '';
+  position: absolute;
+  top: 20%;
+  left:50%;
+  border: 2px solid black;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroller 1s ease-in-out infinite;
+}
+.scroller::after { 
+  top:30%;
+  animation-delay:  0.4s;
+}
+
+@keyframes scroller {
+  0%{
+    opacity: 0;;
+  }
+  30%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    top: 90%;
+  }
+}
+
+
+
+.scroll-top:hover a:hover {
+  color:rgb(160, 78, 112); 
+  cursor: pointer;
+
+}
+
+.btn-tags {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 15%;
+  height: 60%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin: 10px;
+  display: block;
+  margin-right: 100px;
+  margin-left: 80px;
+}
+
+.tag-button {
+  margin: 5px;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px;
+  font-size: 16px;
+  color: white;
+  background-color:rgb(0, 4, 49);
+}
+
+.tag-button:hover {
+  background-color: white;
+  color: black;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+
+.namebtn {  
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 100px;
+}
+
+.add-cart-btn {
+  margin-top: 10px;
+  font-size: 15px;
+  background-color:rgb(0, 4, 49);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 5px;
+}
+
+.add-cart-btn:hover {
+  background-color: white;
+  color: black;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.title-category2 {
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  font-size: 64px;
+  margin-bottom: 100px;
+
+}
+
+
+@media screen and (max-width: 1512px) {
+/* ************************************************************************************************************************************************************************************
+LAPTOP MBA
+************************************************************************************************************************************************************************************ */
+/* ************************************************************************************************************************************************************************************
+BANNER CSS
+************************************************************************************************************************************************************************************ */
+
+.banner-img, 
+.banner-img2, 
+.banner-img3, 
+.shopnow-btn2, 
+.shopnow-btn3, 
+.banner-quote, 
+.banner-quote1, 
+.banner-quote2, 
+.banner-quote3, 
+.banner-quote4, 
+.banner-quote5, 
+.banner-quote6, 
+.banner-quote7{
+  position: absolute;
+  animation: transitionIn 0.75s;
+  background-color: rgb(247, 242, 242);
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+
+.banner-img {
+  height: 900px; 
+  width: 1450px;
+  margin: auto;
+  z-index: 1;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 1px;
+}
+
+
+.shopnow-btn {
+  margin-top: 450px;
+  margin-left: 815px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(43, 39, 39);
+  color: #FDFDFF;
+  border: solid white;
+  border-width: 2px;
+  cursor: pointer;
+  z-index: 9999;
+  margin-bottom: 360px;
+}
+
+.shopnow-btn:hover {
+  background-color: #FDFDFF;
+  color: rgb(27, 26, 26);
+  border: solid black;
+  border-width: 2px;
+}
+
+.banner-quote {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 220px;
+  border: none;
+
+}
+
+.banner-quote1 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: -370px;
+  border: none;
+}
+
+.banner-quote2 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 10px;
+  border: none;
+
+}
+
+.banner-quote:hover, .banner-quote1:hover, .banner-quote2:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  width: 135px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.container-signpage{
+  margin-top: 120px;
+}
+
+
+/* ************************************************************************************************************************************************************************************
+BANNER 2 CSS
+************************************************************************************************************************************************************************************ */
+
+.banner-img2 {
+  height: 900px; 
+  width: 1450px;
+  z-index: -9999;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 1px;
+}
+
+.shopnow-btn2 {
+  margin-top: 450px;
+  margin-left: 600px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(43, 39, 39);
+  color: #FDFDFF;
+  border: solid white;
+  border-width: 2px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.shopnow-btn:hover {
+  background-color: #FDFDFF;
+  color: rgb(27, 26, 26);
+  border: solid black;
+  border-width: 2px;
+}
+
+
+.banner-quote3 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 410px;
+  border: none;
+
+}
+
+.banner-quote4 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 900px;
+  border: none;
+}
+
+.banner-quote5 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 1100px;
+  border: none;
+}
+
+.shopnow-btn2:hover {
+  background-color: #FDFDFF;
+  color: rgb(27, 26, 26);
+  border: solid rgb(0, 0, 0);
+  border-width: 2px;
+}
+
+.banner-quote3:hover, .banner-quote4:hover, .banner-quote5:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  width: 140px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+/* ************************************************************************************************************************************************************************************
+BANNER 3 CSS
+************************************************************************************************************************************************************************************ */
+
+
+.banner-img3 {
+  height: 900px; 
+  width: 1450px;
+  margin: auto;
+  z-index: 1;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 1px;
+}
+
+.shopnow-btn3 {
+  margin-top: 450px;
+  margin-left: 600px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(43, 39, 39);
+  color: #FDFDFF;
+  border: solid white;
+  border-width: 2px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.shopnow-btn3:hover {
+  background-color: #FDFDFF;
+  color: rgb(27, 26, 26);
+  border: solid black;
+  border-width: 2px;
+}
+
+.banner-quote6 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 320px;
+  border: none;
+
+}
+
+.banner-quote7 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 885px;
+  border: none;
+}
+
+
+.shopnow-btn3:hover {
+  background-color: #FDFDFF;
+  color: rgb(27, 26, 26);
+  border: solid black;
+  border-width: 2px;
+}
+
+.banner-quote6:hover, .banner-quote7:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  width: 155px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* ************************************************************************************************************************************************************************************
+CATEGORY CSS
+************************************************************************************************************************************************************************************ */
+
+.border-shopcare {
+  border: solid black;
+  border-width: 2px;
+}
+
+.shopcares-section {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.category-section{
+  display: flex;
+  justify-content: center;
+}
+
+.category-img {
+  transition: transform 0.3s ease;
+  animation: transitionIn 0.75s;
+  height: 510px;
+}
+
+.category-img:hover {
+ transform: scale(1.01)
+}
+.shopmen-container {
+  margin-top: 100px;
+  max-width: max-content;
+}
+
+.btn-tags {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 15%;
+  height: 60%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin: 10px;
+  display: block;
+  margin-right: 100px;
+}
+
+.tag-button {
+  margin: 5px;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px;
+  font-size: 14px;
+  color: white;
+  background-color:rgb(0, 4, 49);
+}
+
+
+.product-container {
+  width: 60%;
+}
+
+.shop-container{
+  display: flex;
+  justify-content: center;
+}
+
+.product-image {
+  /* background-color: rgb(191, 215, 235); */
+  border: solid black;
+  border-width: 1px;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 20px;
+  height: 200px;
+  width: 350;
+  transition: transform 1s ease;
+}
+
+.product-name-text {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+}
+
+.product-image:hover {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+.product-image-women {
+  /* background-color: rgb(235, 192, 206); */
+  border: solid black;
+  border-width: 1px;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 20px;
+  height: 200px;
+  width: 350;
+  transition: transform 1s ease;
+}
+
+.product-image-women:hover {
+  background-color: white;
+  transform: scale(1.2)
+}
+
+.product-image-kids {
+  /* background-color: rgb(241, 241, 184); */
+  border: solid black;
+  border-width: 1px;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 20px;
+  height: 200px;
+  width: 350;
+  transition: transform 1s ease;
+}
+/* background-color: rgb(191, 235, 209); */
+.product-image-kids:hover {
+  background-color: white;
+  transform: scale(1.2)
+}
+
+.namebtn {  
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 50px;
+}
+
+.add-cart-btn {
+  margin-top: 10px;
+  font-size: 12px;
+  background-color:rgb(0, 4, 49);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 5px;
+}
+
+.shop-banner {
+  height: fit-content;
+  width: 100%;
+
+}
+
+.shop-banner-kids {
+  height: 726px;
+  width: 100%;
+  margin-top: 95px;
+}
+
+.shop-banner-women {
+  height: 726px;
+  width: 100%;
+  margin-top: 95px;
+}
+
+.shop-banner-men {
+  height: 726px;
+  width: 100%;
+  margin-top: 95px;
+}
+
+.shop-banner-cart {
+  margin-top: 95px;
+}
+
+.filter-products {
+  display: flex;
+}
+
+.filter-text {
+  font-size: 16px;
+  margin-right: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin-left: 5px;
+}
+
+.nav-title {
+  font-size: 24px;
+}
+
+}
+
+@media screen and (max-width: 1280px) {
+
+  .navbar-container {
+    width: 100%;
+  }
+
+  .banner-img, .banner-img2, .banner-img3 {
+    width: fit-content;
+    margin-top: 100px;
+  }
+
+
+.category-img {
+  margin: 0px;
+  padding: 0px;
+  height: 460px;
+}
+
+.category-img2 {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-container {
+    width: 100%;
+  }
+
+  .banner-img, .banner-img2, .banner-img3 {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .shopnow-btn, .shopnow-btn2, .shopnow-btn3 {
+    visibility: hidden;
+  }
+
+  .banner-quote,
+  .banner-quote1,
+  .banner-quote2,
+  .banner-quote3,
+  .banner-quote4,
+  .banner-quote5,
+  .banner-quote6,
+  .banner-quote7 {
+    visibility: hidden;
+  }
+
+
+.category-img {
+  margin: 0px;
+  padding: 0px;
+  height: 375px;
+}
+
+.category-img2 {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+}
+}
+  
+
+
+@media screen and (max-width: 912px) {
+ 
+  .banner-img, .banner-img2, .banner-img3 {
+    height: 600px;
+    width: 900px;
+    margin-top: 100px;
+  }
+
+  .shopnow-btn2 {
+    margin-left: 280px;
+  }
+  
+  .banner-quote3 {
+    margin-left: 150px;
+  }
+
+  .banner-quote4 {
+    margin-left: 540px;
+  }
+
+
+  .banner-quote5 {
+    margin-left: 650px;
+  }
+
+  .shopnow-btn3 {
+    margin-left: 300px;
+  }
+
+  .banner-quote6 {
+    margin-left: 60px;
+  }
+
+  .banner-quote7 {
+    margin-left: 550px;
+  }
+
+.shopnow-btn {
+  margin-bottom: 100px;
+  margin-left: 0px;
+}
+
+ .banner-quote {
+   margin-left: 100px;
+ }
+
+ .banner-quote1 {
+   margin-left: 180px;
+ }
+
+ .banner-quote2 {
+   margin-left: 400px;
+ }
+
+ .product-container {
+   width: 100%;
+ }
+
+ .shop-banner-men, .shop-banner-women, .shop-banner-kids {
+   height: fit-content;
+ }
+
+ .product-image {
+  background-color: rgb(191, 215, 235);
+
+ }
+
+ .product-image-women {
+  background-color: rgb(235, 192, 206);
+
+ }
+
+ .product-image-kids {
+  background-color: rgb(210, 241, 184);
+
+ }
+
+ .btn-tags {
+   display: none;
+ }
+  
+  .category-img {
+    height: 325px;
+    transition: transform 0.3s ease;
+    animation: transitionIn 0.75s;
+    background-color: rgb(247, 242, 242);
+    border-radius: 5px;
+  }
+
+  
+  .nav-title {
+    font-size: 21px;
+  }
+
+  .product-image, .product-image-women, .product-image-kids{
+    height: 195px;
+  }
+
+}
+
+@media screen and (max-width: 820px) {
+ 
+  .banner-img, .banner-img2, .banner-img3 {
+    height: 600px;
+    width: 900px;
+    margin-top: 100px;
+  }
+
+  .shopnow-btn2 {
+    margin-left: 280px;
+  }
+  
+  .banner-quote3 {
+    margin-left: 150px;
+  }
+
+  .banner-quote4 {
+    margin-left: 540px;
+  }
+
+
+  .banner-quote5 {
+    margin-left: 650px;
+  }
+
+  .shopnow-btn3 {
+    margin-left: 300px;
+  }
+
+  .banner-quote6 {
+    margin-left: 60px;
+  }
+
+  .banner-quote7 {
+    margin-left: 550px;
+  }
+
+.shopnow-btn {
+  margin-left: 0px;
+}
+
+ .banner-quote {
+   margin-left: 100px;
+ }
+
+ .banner-quote1 {
+   margin-left: 180px;
+ }
+
+ .banner-quote2 {
+   margin-left: 400px;
+ }
+
+ .product-container {
+   width: 100%;
+ }
+
+ .shop-banner-men, .shop-banner-women, .shop-banner-kids {
+   height: fit-content;
+ }
+
+ .product-image {
+  background-color: rgb(191, 215, 235);
+
+ }
+
+ .product-image-women {
+  background-color: rgb(235, 192, 206);
+
+ }
+
+ .product-image-kids {
+  background-color: rgb(210, 241, 184);
+
+ }
+
+ .btn-tags {
+   display: none;
+ }
+  
+  .category-img {
+    height: 294px;
+    transition: transform 0.3s ease;
+    animation: transitionIn 0.75s;
+    background-color: rgb(247, 242, 242);
+    border-radius: 5px;
+  }
+
+  .shopnow-btn {
+    margin-bottom: 150px;
+  }
+
+  .men-featured-img, .women-featured-img, .kids-featured-img {
+    height: 180px;
+    margin: 0px;
+  }
+  
+  .nav-title {
+    font-size: 21px;
+  }
+
+  .product-image, .product-image-women, .product-image-kids{
+    height: 195px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+ 
+  .banner-img, .banner-img2, .banner-img3 {
+    height: 550px;
+    width: 870px;
+    margin-top: 100px;
+  }
+
+  .product-image {
+    background-color: rgb(191, 215, 235);
+  
+   }
+  
+   .product-image-women {
+    background-color: rgb(235, 192, 206);
+  
+   }
+  
+   .product-image-kids {
+    background-color: rgb(210, 241, 184);
+  
+   }
+
+  .shopnow-btn2 {
+    margin-left: 280px;
+  }
+  
+  .banner-quote3 {
+    margin-left: 150px;
+  }
+
+  .banner-quote4 {
+    margin-left: 540px;
+  }
+
+
+  .banner-quote5 {
+    margin-left: 650px;
+  }
+
+  .shopnow-btn3 {
+    margin-left: 300px;
+  }
+
+  .banner-quote6 {
+    margin-left: 60px;
+  }
+
+  .banner-quote7 {
+    margin-left: 550px;
+  }
+
+.shopnow-btn {
+  margin-bottom: 100px;
+  margin-left: 0px;
+}
+
+ .banner-quote {
+   margin-left: 100px;
+ }
+
+ .banner-quote1 {
+   margin-left: 180px;
+ }
+
+ .banner-quote2 {
+   margin-left: 400px;
+ }
+
+ .product-container {
+   width: 100%;
+ }
+
+ .shop-banner-men, .shop-banner-women, .shop-banner-kids {
+   height: fit-content;
+ }
+
+ .product-image, .product-image-women, .product-image-kids{
+   height: 160px;
+ }
+
+ .btn-tags {
+   display: none;
+ }
+  
+  .category-img {
+    height: 275px;
+    transition: transform 0.3s ease;
+    animation: transitionIn 0.75s;
+    background-color: rgb(247, 242, 242);
+    border-radius: 5px;
+  }
+
+  .men-featured-img, .women-featured-img, .kids-featured-img {
+    height: 180px;
+    margin: 0px;
+  }
+  
+  .nav-title {
+    font-size: 21px;
+  }
+
+
+}
+
+@media screen and (max-width: 540px) {
+  .navbar-container {
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.7rem 2rem;
+        overflow: hidden;
+        z-index: 2;
+        width: 100%; 
+        margin: auto;
+        top: 0;
+        border-bottom: solid 1px var(--primary-color);
+        opacity: 0.9;
+  
+        box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
+          -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+        box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white,
+          12px 0 15px -4px rgba(31, 73, 125, 0.8),
+          -12px 0 15px -4px rgba(31, 73, 125, 0.8);
+  }
+
+  /* .navlink {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin: 1px;
+    color: white;
+  
+  } */
+
+  .category-section{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+  }
+  .category-img:hover {
+    cursor: pointer;
+    transform: scale( 1.05);
+  }
+
+  .category-section2 {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .category-img2 {
+    padding: 1px;
+  }
+
+/* ************************************************************************************************************************************************************************************
+FEATURED CSS
+************************************************************************************************************************************************************************************ */
+
+.title-featured {
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-top: -40px;
+}
+
+.men-featured-products, .women-featured-products, .kids-featured-products {
+  display: flex;
+  justify-content: center;
+}
+
+
+.men-featured-img, .women-featured-img, .kids-featured-img {
+  height: 90px;
+  border-width: 1px;
+  margin: 5px;
+  transition: transform 0.5s ease;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  animation: transitionIn 0.75s;
+
+}
+
+.banner-img {
+  height: 350px; 
+  width: auto;
+  margin: 50px;
+  z-index: 1;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 1px;
+}
+
+
+.shopnow-btn {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 300px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #FDFDFF;
+  border: solid white;
+  cursor: pointer;
+  margin-bottom: 0px;
+  z-index: 0;
+}
+
+
+
+.banner-quote {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 220px;
+  display: none;
+
+}
+
+.banner-quote1 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: -370px;
+  border: none;
+  display: none;
+
+
+}
+
+.banner-quote2 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 10px;
+  border: none;
+  display: none;
+
+
+}
+
+
+/* ************************************************************************************************************************************************************************************
+BANNER 2 CSS
+************************************************************************************************************************************************************************************ */
+
+.banner-img2 {
+  height: 350px; 
+  width: auto;
+  margin: 50px;
+  z-index: 1;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 1px;
+}
+
+.shopnow-btn2 {
+  visibility: hidden;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 5px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(43, 39, 39);
+  color: #FDFDFF;
+  border: solid white;
+  border-width: 2px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+
+
+.banner-quote3 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 410px;
+  border: none;
+  display: none;
+
+}
+
+.banner-quote4 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 900px;
+  border: none;
+  display: none;
+
+}
+
+.banner-quote5 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 1100px;
+  border: none;
+  display: none;
+
+}
+
+
+
+/* ************************************************************************************************************************************************************************************
+BANNER 3 CSS
+************************************************************************************************************************************************************************************ */
+
+
+.banner-img3 {
+  height: 350px; 
+  width: auto;
+  margin: 50px;
+  z-index: 1;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 1px;
+}
+
+.shopnow-btn3 {
+  margin-top: 450px;
+  margin-left: 600px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(43, 39, 39);
+  color: #FDFDFF;
+  border: solid white;
+  border-width: 2px;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+}
+
+.banner-quote6 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 320px;
+  border: none;
+  display: none;
+
+
+}
+
+.banner-quote7 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 885px;
+  border: none;
+  display: none;
+
+}
+
+.product-container {
+  width: 100%;
+}
+
+.shop-container{
+ display: flex;
+ justify-content: center;
+}
+
+.shop-banner-kids {
+  margin-top: 95px;
+  height: 300px;
+  width: 100%;
+}
+
+.shop-banner-women {
+  margin-top: 95px;
+  height: 300px;
+  width: 100%;
+}
+
+.shop-banner-men {
+  margin-top: 95px;
+  height: 300px;
+  width: 100%;
+}
+
+.container-logout {
+  margin-top: 95px;
+}
+
+.container-error {
+  margin-top: 95px;
+}
+
+.title-category {
+font-size: 27px;
+margin-bottom: 15px;
+}
+
+.title-category2 {
+font-size: 32px;
+margin-bottom: 40px;
+}
+
+.filter-text {
+  font-size: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filter-text2 {
+  display: none;
+}
+
+#search-input{
+  display: none;
+}
+
+.product-image {
+  background-color: rgb(191, 215, 235);
+  border: solid black;
+  border-width: 1px;
+  margin-left: 50px;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 1px;
+  height: 120px;
+  transition: transform 1s ease;
+}
+
+.product-name-text {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+}
+
+
+.product-image-women {
+  background-color: rgb(235, 192, 206);
+  border: solid black;
+  border-width: 1px;
+  margin-left: 50px;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 1px;
+  height: 120px;
+  transition: transform 1s ease;
+}
+
+
+.product-image-kids {
+  background-color: rgb(210, 241, 184);
+  border: solid black;
+  border-width: 1px;
+  margin-left: 50px;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 1px;
+  height: 120px;
+  transition: transform 1s ease;
+}
+
+.btn-tags {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 15%;
+  height: 50%;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  margin: 5px;
+  display: block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.tag-button {
+  margin: 1px;
+  font-family: 'Poppins', sans-serif;
+  padding: 2px;
+  font-size: 12px;
+  color: white;
+  background-color:rgb(0, 4, 49);
+}
+
+.namebtn {  
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 60px
+}
+
+.btn-tags {
+  display: none;
+}
+
+.add-cart-btn {
+  margin-top: 5px;
+  font-size: 12px;
+  background-color:rgb(0, 4, 49);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 5px;
+}
+
+.shop-banner-men, .shop-banner-women, .shop-banner-kids {
+  height: 250px;
+}
+
+.nav-title {
+  font-size: 14px;
+}
+
+.nav_ul {
+  font-size: 12px;
+}
+
+}
+
+@media screen and (max-width: 540px) {
+  /* //////navbar///////// */
+.navbar-container {
+  width: 100%;
+}
+
+  .btn-tags {
+    display: none;
+  }
+
+  .main-logo {
+    width: 120px;
+    height: 40px
+  }
+
+  .banner-img, .banner-img2, .banner-img3{
+   width: 100%;
+  }
+
+  .shopnow-btn {
+    visibility: hidden;
+  }
+
+
+
+  /* //////Products///////// */
+
+  .category-img {
+    height: 195px;
+    padding: 0px;
+  }
+
+  .product-container{
+    width: max-content;
+  }
+
+  .product-image {
+    height: 120px;
+  }
+
+  .product-name-text, .product-price-text {
+    font-size: 15px;
+  }
+
+  .add-cart-btn {
+    font-size: 16px;
+  }
+
+  .container-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-auto-rows: minmax(100px, auto); */
+  }
+
+
+.scoller {
+  visibility: hidden;
+}
+
+
+.men-featured-img{
+  height: 95px;
+}
+
+.shop-banner-men {
+  width: 100%;
+}
+
+.shop-banner-women {
+  width: 100%;
+}
+
+.shop-banner-kids {
+  width: 100%;
+}
+
+hr {
+  visibility: hidden;
+}
+
+  /* //////Cart///////// */
+.product-image-cart {
+  height: 100px;
+}
+
+.cart-container {
+  width: 110%;
+}
+
+.cart-details {
+  font-size: 12px;
+}
+
+.qty-cart {
+margin: 5px;
+}
+
+  /* //////Signin///////// */
+
+.container-container {
+  width: 100%;
+}
+
+.container-signpage {
+  margin-top: 120px;
+  margin-left: 30px; 
+}
+
+  /* //////Logout///////// */
+
+.container-thankyou {
+  margin-top: 100px;
+}
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (max-width: 500px) {
+
+  /* ************************************************************************************************************************************************************************************
+  Mobile
+  ************************************************************************************************************************************************************************************ */
+
+  .category-section{
+    display: flex;
+
+  }
+  
+  .category-img {
+    height: 175px;
+
+  }
+  
+  .category-img:hover {
+    cursor: pointer;
+    transform: scale( 1.05);
+  }
+
+/* ************************************************************************************************************************************************************************************
+FEATURED CSS
+************************************************************************************************************************************************************************************ */
+
+.men-featured-products, .women-featured-products, .kids-featured-products {
+  display: flex;
+  justify-content: center;
+}
+
+
+.men-featured-img, .women-featured-img, .kids-featured-img {
+  height: 90px;
+  border-width: 1px;
+  margin: 5px;
+  transition: transform 0.5s ease;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  animation: transitionIn 0.75s;
+
+}
+
+.banner-img {
+  height: 350px; 
+  width: auto;
+  margin: 50px;
+  z-index: 1;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 1px;
+}
+
+
+.shopnow-btn {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 300px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #FDFDFF;
+  border: solid white;
+  cursor: pointer;
+  margin-bottom: 0px;
+  z-index: 0;
+}
+
+
+
+.banner-quote {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 220px;
+  display: none;
+
+}
+
+.banner-quote1 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: -370px;
+  border: none;
+  display: none;
+
+
+}
+
+.banner-quote2 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 10px;
+  border: none;
+  display: none;
+
+
+}
+
+
+/* ************************************************************************************************************************************************************************************
+BANNER 2 CSS
+************************************************************************************************************************************************************************************ */
+
+.banner-img2 {
+  height: 350px; 
+  width: auto;
+  margin: 50px;
+  z-index: 1;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 1px;
+}
+
+.shopnow-btn2 {
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 5px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(43, 39, 39);
+  color: #FDFDFF;
+  border: solid white;
+  border-width: 2px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+
+
+.banner-quote3 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 410px;
+  border: none;
+  display: none;
+
+}
+
+.banner-quote4 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 900px;
+  border: none;
+  display: none;
+
+}
+
+.banner-quote5 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 1100px;
+  border: none;
+  display: none;
+
+}
+
+
+
+/* ************************************************************************************************************************************************************************************
+BANNER 3 CSS
+************************************************************************************************************************************************************************************ */
+
+
+.banner-img3 {
+  height: 350px; 
+  width: auto;
+  margin: 50px;
+  z-index: 1;
+  border-width: 50px;
+  border-bottom: solid black;
+  margin-left: 1px;
+}
+
+.shopnow-btn3 {
+  margin-top: 450px;
+  margin-left: 600px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(43, 39, 39);
+  color: #FDFDFF;
+  border: solid white;
+  border-width: 2px;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+}
+
+.banner-quote6 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 320px;
+  border: none;
+  display: none;
+
+
+}
+
+.banner-quote7 {
+  background-color: #f1f1c8;
+  color: black;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  margin-top: 480px;
+  margin-left: 885px;
+  border: none;
+  display: none;
+
+}
+
+.product-container {
+  width: 80%;
+}
+
+.shop-container{
+ display: flex;
+ justify-content: center;
+}
+
+.shop-banner-kids {
+  margin-top: 95px;
+  height: 300px;
+  width: 100%;
+}
+
+.shop-banner-women {
+  margin-top: 95px;
+  height: 300px;
+  width: 100%;
+}
+
+.shop-banner-men {
+  margin-top: 95px;
+  height: 300px;
+  width: 100%;
+}
+
+.title-category {
+font-size: 27px;
+margin-bottom: 15px;
+}
+
+.title-category2 {
+font-size: 32px;
+margin-bottom: 40px;
+}
+
+.filter-text {
+  font-size: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filter-text2 {
+  display: none;
+}
+
+#search-input{
+  display: none;
+}
+
+.product-image {
+  background-color: rgb(191, 215, 235);
+  border: solid black;
+  border-width: 1px;
+  margin-left: 50px;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 1px;
+  height: 120px;
+  transition: transform 1s ease;
+}
+
+.product-name-text {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+}
+
+
+.product-image-women {
+  background-color: rgb(235, 192, 206);
+  border: solid black;
+  border-width: 1px;
+  margin-left: 50px;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 1px;
+  height: 120px;
+  transition: transform 1s ease;
+}
+
+
+.product-image-kids {
+  background-color: rgb(210, 241, 184);
+  border: solid black;
+  border-width: 1px;
+  margin-left: 50px;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 1px;
+  height: 120px;
+  transition: transform 1s ease;
+}
+
+.btn-tags {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 15%;
+  height: 50%;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  margin: 5px;
+  display: block;
+  margin-right: 10px;
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+.scroller {
+  visibility: hidden;
+}
+
+.tag-button {
+  margin: 1px;
+  font-family: 'Poppins', sans-serif;
+  padding: 2px;
+  font-size: 12px;
+  color: white;
+  background-color:rgb(0, 4, 49);
+}
+
+.namebtn {  
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 60px;
+}
+
+
+.add-cart-btn {
+  margin-top: 5px;
+  font-size: 12px;
+  background-color:rgb(0, 4, 49);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 5px;
+}
+
+.shop-banner-men, .shop-banner-women, .shop-banner-kids {
+  height: 250px;
+}
+
+.nav-title {
+  font-size: 14px;
+}
+
+.nav_ul {
+  font-size: 12px;
+}
+
+
+/* ************************************************************************************************************************************************************************************
+FOOTER CSS
+************************************************************************************************************************************************************************************ */
+
+
+.contact-footer {
+  background-color: rgb(43, 39, 39);
+  color:white;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav-title {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+  background-color: rgb(43, 39, 39);
+  font-size: 16px;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  border-radius: 100px;
+  border: solid white;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 0.8rem;
+  padding: 0 1.3em;
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+/* .footer ul {
+  list-style: none;
+  padding-left: 0;
+  background-color: rgb(43, 39, 39);
+  color: white;
+} */
+
+.footer li {
+  line-height: 1.5em;
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+.footer a {
+  text-decoration: none;
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+
+.footer__nav {
+  display: flex;
+	flex-flow: row wrap;
+
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+
+}
+
+.nav-title {
+  background-color: rgb(43, 39, 39);
+  color: white;
+}
+
+.nav__ul a {
+  color: #999;
+  font-size: 15px;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: rgb(43, 39, 39);
+}
+
+.legal-text {
+  background-color: rgb(43, 39, 39);
+  color: white;
+  font-size: 16px;
+}
+
+
+
+}
+
+@media screen and (max-width: 440px) {
+  .category-img {
+    height: 200px;
+}
+
+}
+
+@media screen and (max-width: 414px) {
+
+/* //////navbar///////// */
+.navbar-container {
+  width: 100%;
+}
+
+  .btn-tags {
+    display: none;
+  }
+
+  .main-logo {
+    width: 120px;
+    height: 40px
+  }
+
+  .banner-img, .banner-img2, .banner-img3{
+   width: 100%;
+  }
+
+  .shopnow-btn {
+    visibility: hidden;
+  }
+
+
+  /* //////Products///////// */
+
+  .category-img {
+    height: 150px;
+    padding: 0px;
+  }
+
+  .product-container{
+    width: max-content;
+  }
+
+  .product-image {
+    height: 120px;
+  }
+
+  .product-name-text, .product-price-text {
+    font-size: 15px;
+  }
+
+  .add-cart-btn {
+    font-size: 16px;
+  }
+
+  .container-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-auto-rows: minmax(100px, auto); */
+  }
+
+
+.scoller {
+  visibility: hidden;
+}
+
+
+.men-featured-img{
+  height: 95px;
+}
+
+.shop-banner-men {
+  width: 100%;
+}
+
+.shop-banner-women {
+  width: 100%;
+}
+
+.shop-banner-kids {
+  width: 100%;
+}
+
+hr {
+  visibility: hidden;
+}
+
+  /* //////Cart///////// */
+.product-image-cart {
+  height: 100px;
+}
+
+.cart-container {
+  width: 110%;
+}
+
+.cart-details {
+  font-size: 12px;
+}
+
+.qty-cart {
+margin: 5px;
+}
+
+  /* //////Signin///////// */
+
+.container-container {
+  width: 100%;
+}
+
+.container-signpage {
+  margin-top: 120px;
+  margin-left: 30px; 
+}
+
+  /* //////Logout///////// */
+
+.container-thankyou {
+  margin-top: 100px;
+}
+
+}
+
+
+@media screen and (max-width: 375px) {
+
+  .btn-tags {
+    display: none;
+  }
+
+}
+
+
+@media screen and (max-width: 360px) {
+.men-featured-img{
+  height: 80px;
+}
+
+.category-img {
+  padding: 0px;
+  height: 132px;
+}
+
+}
+
+@media screen and (max-width: 280px) {
+  .banner-img, .banner-img2, .banner-img3{
+   width: 100%;
+   }
+
+.men-featured-img{
+  height: 60px;
+}
+
+.footer {
+  width: 121%;
+}
+
+.shop-banner-men {
+  width: 121%;
+}
+
+.shop-banner-women {
+  width: 121%;
+}
+
+.shop-banner-kids {
+  width: 121%;
+}
+
+.category-img {
+  height: 100px;
+}
 }
