@@ -425,6 +425,7 @@ HOME CSS
 BANNER CSS
 ************************************************************************************************************************************************************************************ */
 
+
 .banner-img, 
 .banner-img2, 
 .banner-img3, 
@@ -473,10 +474,8 @@ to {
 }
 }
 
-
 .banner-img {
   height: max-content;
-  width: max-content;
   margin: auto;
   z-index: 1;
   border-width: 50px;
@@ -813,7 +812,7 @@ CATEGORY CSS
 }
 
 .category-img {
-  height: 700px;
+  height: 680px;
   transition: transform 0.3s ease;
   animation: transitionIn 0.75s;
   cursor: pointer;

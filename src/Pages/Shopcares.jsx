@@ -22,13 +22,13 @@ function Shopcares() {
         Those are the chemicals that may be the reason for bad allergies, constant itching, and redness in most unexpected places.
         Buying our eco-friendly clothes, you can forget about the issue. We perfected our crafted based on decades of experiences. Moreover, organic fabrics feel so much better on your <strong>skin.</strong></p>
 
-        <li><h5>Good for your health</h5></li>
+        <li><h5>Good quality</h5></li>
         <p>If washed wrong, it will be impossible to wear and sometimes discoloration spoiled it. Our eco products are proven that can last long for you to enjoy.</p>
         <li><h5>It is personal</h5></li>
         <p>Our eco-friendly products are not being produced on the assembly lines of the factory. You can be sure that your piece of clothing will be much more unique than others. Thats why we believe there's a style in every story. Be bold. Be you!</p>
         <li><h5>You spread awareness</h5></li>
         <p>You can educate about the others and be an example to present our products made from natural fibers and make people rethink their brand favorites as well. Inspire them with your own styles!</p>
-        <li><h5>You spread awareness</h5></li>
+        <li><h5>Your contribution</h5></li>
         <p>Fashion that is not sustainable adds up to carbon dioxide emissions, poisoning the soil and enriching the landfills with plastic. The jacket one buys at a mass-market shop will not leave the planet in 200 years. 
           The chemicals that are used to dye the clothes and protect the cotton from animals will pollute water, sub-layers of soil and air all at once so buying our eco friendly products can surely help our cause even if its small step we still make a big difference.</p>
       </ul>
@@ -65,7 +65,7 @@ function Shopcares() {
         </div>
     
         <div class="col-md-6 col-lg-4 mb-4">
-        <h6 class="mb-3"><i class="far fa-paper-plane pe-2 bg-light"></i><strong class="fs-5">What is the Cancellation Policy of UrbanFit-Store</strong></h6>
+        <h6 class="mb-3"><i class="far fa-paper-plane pe-2 bg-light"></i><strong class="fs-5">What is the Cancellation Policy of UrbanFit-Store?</strong></h6>
           <p class="bg-light"> 
             <strong><u>Urban Fit Cancellation Policy</u></strong> 
             <ul>
@@ -121,7 +121,7 @@ function Shopcares() {
     </section>
     <div class="container"> <div class=" text-center mt-5 ">
         <h2 class="bg-light">Still have questions?</h2>
-        <h2 class="bg-light">Contact us!</h2>
+        <h2 class="bg-light">Get in touch</h2>
     </div>
     <div class="row">
         <div class="col-lg-7 mx-auto mb-5">
